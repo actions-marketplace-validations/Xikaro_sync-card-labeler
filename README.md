@@ -1,4 +1,4 @@
-# Auto card labeler
+# Sync Card Labeler
 
 [![CI Status](https://github.com/technote-space/auto-card-labeler/workflows/CI/badge.svg)](https://github.com/technote-space/auto-card-labeler/actions)
 [![codecov](https://codecov.io/gh/technote-space/auto-card-labeler/branch/main/graph/badge.svg)](https://codecov.io/gh/technote-space/auto-card-labeler)

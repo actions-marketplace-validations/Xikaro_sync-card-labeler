@@ -2,7 +2,7 @@ name: Sync Card Labeler
 
 description: GitHub actions that automatically labels Issues or PullRequests based on project card moves with bidirectional sync support.
 
-author: xikaro
+author: Xikaro
 
 inputs:
   GITHUB_TOKEN:
@@ -30,12 +30,12 @@ inputs:
     default: ''
     required: false
   PROJECT_CONFIG_IS_REQUIRED:
-    description: Whether to throw an error if the project's configuration is not found.
-    default: 'false'
+    description: Whether to throw an error if project's configuration is not found.
+    default: 'true'
     required: false
   ENABLE_LABELS_TO_PROJECT:
     description: Enable bidirectional sync from labels to project cards.
-    default: 'false'
+    default: 'true'
     required: false
 
 branding:

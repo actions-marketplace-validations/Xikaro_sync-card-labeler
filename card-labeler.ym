@@ -1,6 +1,6 @@
 Roadmap-Team:
   views:
-    Status:
+    Status:  # ID: 1
       Dropped:
         - 'Status: Dropped'
       Backlog:
@@ -11,7 +11,7 @@ Roadmap-Team:
         - 'Status: In Progress'
       Done:
         - 'Status: Done'
-    Priority:
+    Priority:  # ID: 3
       Critical:
         - 'Priority: Critical'
       High:

@@ -12,6 +12,22 @@ export class ViewDetector {
       return labelType;
     }
 
+    // Если не нашли по имени, возможно это цифровой ID
+    const viewId = parseInt(labelType);
+    if (!isNaN(viewId)) {
+      // Ищем view по ID в конфигурации
+      const viewNames = Object.keys(projectConfig.views);
+      const viewIndex = viewId - 1; // view ID начинаются с 1
+      
+      if (viewIndex >= 0 && viewIndex < viewNames.length) {
+        const foundView = viewNames[viewIndex];
+        if (foundView) {
+          console.log(`Found view by ID ${viewId}: ${foundView}`);
+          return foundView;
+        }
+      }
+    }
+
     return null;
   }
 

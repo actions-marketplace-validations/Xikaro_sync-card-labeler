@@ -1,32 +1,37 @@
 {
-  "name": "@technote-space/auto-card-labeler",
-  "version": "2.1.2",
-  "description": "GitHub actions that automatically labels Issues or PullRequests based on project card moves.",
+  "name": "@xikaro/sync-card-labeler",
+  "version": "3.0.2",
+  "description": "GitHub actions that automatically labels Issues or PullRequests based on project card moves with bidirectional sync support.",
   "keywords": [
     "github",
     "github actions",
-    "github projects"
+    "github projects",
+    "card labeler",
+    "sync",
+    "automation",
+    "issues",
+    "pull requests"
   ],
-  "homepage": "https://github.com/technote-space/auto-card-labeler",
+  "homepage": "https://github.com/Xikaro/sync-card-labeler",
   "bugs": {
-    "url": "https://github.com/technote-space/auto-card-labeler/issues"
+    "url": "https://github.com/Xikaro/sync-card-labeler/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/technote-space/auto-card-labeler.git"
+    "url": "https://github.com/Xikaro/sync-card-labeler.git"
   },
   "license": "MIT",
   "author": {
-    "name": "Technote",
-    "email": "technote.space@gmail.com",
-    "url": "https://technote.space"
+    "name": "Xikaro",
+    "email": "os.valerievich@gmail.com",
+    "url": "https://github.com/Xikaro"
   },
   "files": [
     "lib",
     "action.yml"
   ],
   "scripts": {
-    "build": "rm -rdf lib && rollup -c",
+    "build": "npx rimraf lib && rollup -c",
     "cover": "vitest run --coverage",
     "postinstall": "[ -n \"$CI\" ] || [ ! -f node_modules/.bin/husky ] || husky install",
     "lint": "eslint 'src/**/*.ts' --cache",

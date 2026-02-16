@@ -98,4 +98,27 @@ export class ProjectApi {
       return [];
     }
   }
+
+  async getViewByName(projectId: number, viewNameOrId: string | number): Promise<any | null> {
+    try {
+      // Сначала пробуем найти по имени
+      const views = await this.getProjectViews(projectId);
+      const viewByName = views.find(view => view.name === viewNameOrId);
+      if (viewByName) {
+        return viewByName;
+      }
+      
+      // Если не нашли по имени, пробуем по ID
+      const viewId = parseInt(viewNameOrId.toString());
+      if (!isNaN(viewId)) {
+        const viewById = views.find(view => view.id === viewId);
+        return viewById || null;
+      }
+      
+      return null;
+    } catch (error) {
+      console.error('Error getting view by name/ID:', error);
+      return null;
+    }
+  }
 }
