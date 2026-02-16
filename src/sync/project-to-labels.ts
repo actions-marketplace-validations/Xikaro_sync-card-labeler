@@ -4,7 +4,7 @@ import type { Logger } from '@technote-space/github-action-log-helper';
 import type { ConfigType } from '../types';
 import { getRelatedInfo, getLabels, addLabels, removeLabels } from '../utils/issue';
 import { getAddLabels, getRemoveLabels } from '../utils/label';
-import { getColumnName, getConfigFilename, getProjectName } from '../utils/misc';
+import { getColumnName, getProjectName } from '../utils/misc';
 
 // Типы для обратной совместимости с существующими функциями
 type ProjectConfigType = {

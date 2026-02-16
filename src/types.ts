@@ -16,7 +16,7 @@ export interface ProjectConfig {
   sync_directions?: SyncDirections;
   conflict_resolution?: ConflictResolution;
   // Обратная совместимость со старым форматом
-  [columnName: string]: string | string[] | ViewConfig | SyncDirections | ConflictResolution;
+  [key: string]: any;
 }
 
 export interface ConfigType {

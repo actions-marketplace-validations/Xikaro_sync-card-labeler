@@ -1,0 +1,30 @@
+Roadmap-Team:
+  views:
+    Status:
+      Dropped:
+        - 'Status: Dropped'
+      Backlog:
+        - 'Status: Backlog'
+      Ready:
+        - 'Status: Ready'
+      'In Progress':
+        - 'Status: In Progress'
+      Done:
+        - 'Status: Done'
+    Priority:
+      Critical:
+        - 'Priority: Critical'
+      High:
+        - 'Priority: High'
+      Medium:
+        - 'Priority: Medium'
+      Low:
+        - 'Priority: Low'
+      'Long-term plans':
+        - 'Priority: Long-term plans'
+  sync_directions:
+    project_to_labels: true
+    labels_to_project: true
+  conflict_resolution:
+    priority_over_status: true
+    last_change_wins: true

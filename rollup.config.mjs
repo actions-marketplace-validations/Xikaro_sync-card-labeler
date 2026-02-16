@@ -10,7 +10,9 @@ export default {
     format: 'cjs',
   },
   plugins: [
-    pluginTypescript(),
+    pluginTypescript({
+      exclude: ['**/*.test.ts', '**/*.spec.ts']
+    }),
     pluginNodeResolve(),
     pluginCommonjs(),
     pluginJson(),

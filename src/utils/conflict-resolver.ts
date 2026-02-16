@@ -38,7 +38,7 @@ export class ConflictResolver {
     return grouped;
   }
 
-  private async resolveIssueTargets(issueNumber: number, targets: SyncTarget[]): Promise<SyncTarget[]> {
+  private async resolveIssueTargets(_issueNumber: number, targets: SyncTarget[]): Promise<SyncTarget[]> {
     // Проверяем конфликты между разными view
     const viewConflicts = this.detectViewConflicts(targets);
     

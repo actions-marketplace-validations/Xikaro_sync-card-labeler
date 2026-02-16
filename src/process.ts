@@ -4,7 +4,7 @@ import type { Logger } from '@technote-space/github-action-log-helper';
 import { getConfig } from '@technote-space/github-action-config-helper';
 import { ProjectNotFoundError } from './errors';
 import { getRelatedInfo } from './utils/issue';
-import { getColumnName, getConfigFilename, getProjectName, isProjectConfigRequired } from './utils/misc';
+import { getConfigFilename, getProjectName, isProjectConfigRequired } from './utils/misc';
 import { ConfigParser } from './config/parser';
 import { ProjectToLabelsSync } from './sync/project-to-labels';
 import { LabelsToProjectSync } from './sync/labels-to-project';

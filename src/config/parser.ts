@@ -33,7 +33,9 @@ export class ConfigParser {
     // Обратная совместимость - копируем остальные поля как колонки
     for (const [key, value] of Object.entries(projectData)) {
       if (!['views', 'sync_directions', 'conflict_resolution'].includes(key)) {
-        config[key] = value;
+        if (typeof value === 'string' || Array.isArray(value)) {
+          config[key] = value;
+        }
       }
     }
 

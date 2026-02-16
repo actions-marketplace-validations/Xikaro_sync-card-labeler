@@ -1,7 +1,7 @@
 import type { Context } from '@actions/github/lib/context';
 import type { Octokit } from '@technote-space/github-action-helper/dist/types';
 import type { Logger } from '@technote-space/github-action-log-helper';
-import type { ConfigType, LabelChange, SyncTarget, ConflictResolution } from '../types';
+import type { ConfigType, LabelChange, SyncTarget } from '../types';
 import { getRelatedInfo } from '../utils/issue';
 import { ProjectApi } from '../utils/project-api';
 import { ViewDetector } from '../utils/view-detector';
@@ -20,7 +20,7 @@ export class LabelsToProjectSync {
     private config: ConfigType,
     private logger: Logger
   ) {
-    this.projectApi = new ProjectApi(octokit, context);
+    this.projectApi = new ProjectApi(octokit);
     this.viewDetector = new ViewDetector(config);
     this.conflictResolver = new ConflictResolver(config);
     this.labelDetector = new LabelDetector();
@@ -101,6 +101,8 @@ export class LabelsToProjectSync {
     if (!projectConfig?.views?.[viewName]) return null;
 
     const viewConfig = projectConfig.views[viewName];
+    if (!viewConfig) return null;
+    
     for (const [columnName, labels] of Object.entries(viewConfig)) {
       const labelArray = Array.isArray(labels) ? labels : [labels];
       if (labelArray.includes(label)) {
