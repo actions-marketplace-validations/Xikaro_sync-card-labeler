@@ -1,8 +1,8 @@
-name: Auto card labeler
+name: Sync Card Labeler
 
 description: GitHub actions that automatically labels Issues or PullRequests based on project card moves with bidirectional sync support.
 
-author: technote-space
+author: xikaro
 
 inputs:
   GITHUB_TOKEN:
